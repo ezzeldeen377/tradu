@@ -1,3 +1,4 @@
+import 'package:crypto_app/core/errors/app_exception.dart';
 import 'package:crypto_app/features/home/data/home_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
@@ -21,9 +22,14 @@ class WithdrawCubit extends Cubit<WithdrawState> {
           balance: result.balance,
         ),
       );
+    } on AppException catch (e) {
+      emit(state.copyWith(status: WithdrawStatus.failure, message: e.message));
     } catch (e) {
       emit(
-        state.copyWith(status: WithdrawStatus.failure, message: e.toString()),
+        state.copyWith(
+          status: WithdrawStatus.failure,
+          message: _extractErrorMessage(e),
+        ),
       );
     }
   }
@@ -39,10 +45,25 @@ class WithdrawCubit extends Cubit<WithdrawState> {
           balance: result.user?.balance,
         ),
       );
+    } on AppException catch (e) {
+      emit(state.copyWith(status: WithdrawStatus.failure, message: e.message));
     } catch (e) {
       emit(
-        state.copyWith(status: WithdrawStatus.failure, message: e.toString()),
+        state.copyWith(
+          status: WithdrawStatus.failure,
+          message: _extractErrorMessage(e),
+        ),
       );
     }
+  }
+
+  String _extractErrorMessage(dynamic error) {
+    String errorMessage = error.toString();
+    if (errorMessage.startsWith('Exception: ')) {
+      errorMessage = errorMessage.substring(11);
+    }
+    return errorMessage.isNotEmpty
+        ? errorMessage
+        : 'An unexpected error occurred. Please try again.';
   }
 }

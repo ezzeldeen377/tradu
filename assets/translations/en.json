@@ -42,7 +42,7 @@
     "send_reset_link": "Send Reset Link",
     "back_to_login": "Back to Login",
     "verify_account": "Verify Your Account",
-    "verify_subtitle": "We have sent a 4-digit code to",
+    "verify_subtitle": "We have sent a 6-digit code to",
     "verify_enter_code": "Please enter it below.",
     "resend_code_in": "Resend code in",
     "didnt_receive_code": "Didn't receive code? Resend",

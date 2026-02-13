@@ -42,7 +42,7 @@
     "send_reset_link": "إرسال رابط إعادة التعيين",
     "back_to_login": "العودة لتسجيل الدخول",
     "verify_account": "تحقق من حسابك",
-    "verify_subtitle": "لقد أرسلنا رمزًا مكونًا من 4 أرقام إلى",
+    "verify_subtitle": "لقد أرسلنا رمزًا مكونًا من 6 أرقام إلى",
     "verify_enter_code": "الرجاء إدخاله أدناه.",
     "resend_code_in": "إعادة إرسال الرمز في",
     "didnt_receive_code": "لم تستلم الرمز؟ إعادة إرسال",
