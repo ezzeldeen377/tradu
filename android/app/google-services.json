@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "502808193500",
+    "project_id": "tradu-70277",
+    "storage_bucket": "tradu-70277.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502808193500:android:c7ed2c1bf1d399aa824719",
+        "android_client_info": {
+          "package_name": "com.example.crypto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAuO1QfLAxy0fbtGgvnE4dJq4bMAhvzkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
